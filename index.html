@@ -3,21 +3,19 @@
 <head>
     <title>Rajvi Agravat</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-
         body {
-            font-family:'Times New Roman', Times, serif;
+            font-family: 'Times New Roman', Times, serif;
             line-height: 1.6;
             margin: 0;
             background-color: #f0f2f5;
             color: #333;
         }
         .header {
-            background: linear-gradient(to right, #004080, #00aaff);
+            background: #004080; /* Dark Blue */
             color: #ffffff;
             padding: 20px 0;
             text-align: center;
-            border-bottom: 5px solid #004080;
+            border-bottom: 5px solid #00aaff;
         }
         .container {
             max-width: 900px;
@@ -28,7 +26,6 @@
             border-radius: 10px;
             display: flex;
             align-items: flex-start;
-            animation: fadeIn 1s ease-in-out;
         }
         h1 {
             color: #ffffff;
@@ -68,15 +65,13 @@
         .social-links a:hover img {
             transform: scale(1.2);
         }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .footer {
+            background: #004080; /* Dark Blue */
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 40px;
+            border-top: 5px solid #00aaff;
         }
     </style>
 </head>
@@ -104,6 +99,9 @@
                 </a>
             </div>
         </div>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 Rajvi Agravat. All Rights Reserved.</p>
     </div>
 </body>
 </html>
