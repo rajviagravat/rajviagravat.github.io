@@ -11,11 +11,11 @@
             color: #333;
         }
         .header {
-            background: #001f3f; /* Navy Blue */
+            background: #001233; /* Darker Navy Blue */
             color: #ffffff;
             padding: 20px 0;
             text-align: center;
-            border-bottom: 5px solid #0074D9; /* Accent Blue */
+            border-bottom: 5px solid #004080; /* Accent Blue */
         }
         .container {
             max-width: 900px;
@@ -41,7 +41,7 @@
             width: auto;
             height: auto;
             border-radius: 50%;
-            border: 4px solid #001f3f;
+            border: 4px solid #001233;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         p {
@@ -66,12 +66,24 @@
             transform: scale(1.2);
         }
         .footer {
-            background: #001f3f; /* Navy Blue */
+            background: #001233; /* Darker Navy Blue */
             color: #ffffff;
             text-align: center;
             padding: 10px 0;
             margin-top: 40px;
-            border-top: 5px solid #0074D9; /* Accent Blue */
+            border-top: 5px solid #004080; /* Accent Blue */
+        }
+        .cv-link {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .cv-link a {
+            color: #004080; /* Accent Blue */
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .cv-link a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -82,7 +94,7 @@
     <div class="container">
         <img src="images/rajvi.png" alt="Rajvi Agravat">
         <div class="text-content">
-            <p>Hello! I am a Ph.D. student in Neuroscience at The University of Texas at Austin, focusing on how the brain processes speech and auditory information and studying auditory attention. In the Hamilton Lab, I study auditory attention and neuroplasticity in epilepsy patients using electrophysiology techniques like electroencephalography (EEG) and intracranial EEG (sEEG). Concurrently, for another project, I use speech and music encoding models to understand how different brain areas represent acoustic features of speech and music, such as spectrograms and pitch.</p>
+            <p>Hello! I am a Ph.D. student in Neuroscience at The University of Texas at Austin, focusing on how the brain processes speech and auditory information and studying auditory attention. In the <a href="https://example.com/hamilton-lab" target="_blank">Hamilton Lab</a>, I study auditory attention and neuroplasticity in epilepsy patients using electrophysiology techniques like electroencephalography (EEG) and intracranial EEG (sEEG). Concurrently, for another project, I use speech and music encoding models to understand how different brain areas represent acoustic features of speech and music, such as spectrograms and pitch.</p>
             
             <p>With over 5 years of experience in neuroscience research, I have worked on diverse projects, such as neural connectivity mapping in vocal communication circuits, executive function task processing in children, and cognitive assessments for individuals with stroke and epilepsy.</p>
             
@@ -98,10 +110,14 @@
                     <img src="images/twitter.png" alt="Twitter">
                 </a>
             </div>
+
+            <div class="cv-link">
+                <p><a href="Rajvi Agravat - CV.pdf" target="_blank">Here's my CV</a></p>
+            </div>
         </div>
     </div>
     <div class="footer">
-        <p>&copy; 2024 Rajvi Agravat.</p>
+        <p>&copy; 2024 Rajvi Agravat. All Rights Reserved.</p>
     </div>
 </body>
 </html>
