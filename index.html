@@ -185,6 +185,25 @@
             font-size: 14px;
             font-weight: bold;
         }
+        .press-conference {
+            color: #d32f2f;
+            font-weight: 500;
+        }
+        
+        ul ul {
+            margin-top: 8px;
+            margin-bottom: 12px;
+        }
+        
+        ul ul li {
+            margin-bottom: 5px;
+        }
+        
+        ul ul li::before {
+            content: '◦';
+            color: #b8e6d4;
+            font-size: 14px;
+        }
         @media (max-width: 768px) {
             .container {
                 grid-template-columns: 1fr;
@@ -291,23 +310,27 @@
             <div class="section">
                 <h2>Presentations & Recognition</h2>
                 
-                <div class="presentation-item">
-                    <p><strong>Conference Presentations:</strong></p>
-                    <ul>
-                        <li> (Upcoming) R. Agravat, M. Desai, G. Foox, A. Field, A. Watrous, A. Anderson, D. Clarke, E. T. Kabara, H. Weiner,
-                            L. Hamilton. Direct Brain Recordings Show Neural Prioritization of Speech Over Music in Children.</li>
-                            <li> • Society for Neurobiology of Language (SNL), 2025. Washington, DC.</li>
-                            <li> • Berkeley Neuroscience Conference, 2025. Lake Tahoe, CA.</li>
-                            <li> • LLMs & the Brain, 2025. Houston, TX.</li>
-                            <li> • Advances and Perspectives in Auditory Neuroscience (APAN), 2025. San Diego, CA.</li>
-                            <li> • Society for Neuroscience (SfN), 2025. San Diego, CA. [abstract selected for press conference]</li>
-                        <li>R. Agravat, M. Desai, G. Foox, A. Field, A. Anderson, D. Clarke, E. T. Kabara, H. Weiner, L. Hamilton. Neural
-                            Encoding of Acoustic Features Across Speech and Music in the Human Brain.</li>
-                            </li> • The University of Texas System-wide Brain Research Summit, 2024. Austin, TX.</li>
-                            </li> • Advances and Perspectives in Auditory Neuroscience (APAN), 2024. Chicago, IL.</li>
-                            </li> • Society for Neuroscience (SfN), 2024. Chicago, IL.</li>
-                    </ul>
-                </div>
+            <div class="presentation-item">
+                <p><strong>Conference Presentations:</strong></p>
+                <ul>
+                    <li>(Upcoming) R. Agravat, M. Desai, G. Foox, A. Field, A. Watrous, A. Anderson, D. Clarke, E. T. Kabara, H. Weiner, L. Hamilton. Direct Brain Recordings Show Neural Prioritization of Speech Over Music in Children.
+                        <ul>
+                            <li>Society for Neurobiology of Language (SNL), 2025. Washington, DC.</li>
+                            <li>Berkeley Neuroscience Conference, 2025. Lake Tahoe, CA.</li>
+                            <li>LLMs & the Brain, 2025. Houston, TX.</li>
+                            <li>Advances and Perspectives in Auditory Neuroscience (APAN), 2025. San Diego, CA.</li>
+                            <li>Society for Neuroscience (SfN), 2025. San Diego, CA. <span class="press-conference">[abstract selected for press conference]</span></li>
+                        </ul>
+                    </li>
+                    <li>R. Agravat, M. Desai, G. Foox, A. Field, A. Anderson, D. Clarke, E. T. Kabara, H. Weiner, L. Hamilton. Neural Encoding of Acoustic Features Across Speech and Music in the Human Brain.
+                        <ul>
+                            <li>The University of Texas System-wide Brain Research Summit, 2024. Austin, TX.</li>
+                            <li>Advances and Perspectives in Auditory Neuroscience (APAN), 2024. Chicago, IL.</li>
+                            <li>Society for Neuroscience (SfN), 2024. Chicago, IL.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
 
                 <div class="presentation-item">
                     <p><strong>Professional Involvement:</strong></p>
@@ -323,6 +346,7 @@
     </div>
 </body>
 </html>
+
 
 
 
