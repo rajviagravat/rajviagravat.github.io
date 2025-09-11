@@ -223,7 +223,23 @@
         ul ul li {
             margin-bottom: 5px;
         }
+        .document-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
         
+        .document-links a {
+            color: #333;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        
+        .document-links a:hover {
+            color: #333;
+        }
         ul ul li::before {
             content: '◦';
             color: #333;
@@ -270,19 +286,9 @@
                 </div>
             </div>
 
-            <div class="links-section">
-                <div class="link-item">
-                    <a href="RajviAgravat_CV_08_2025.pdf" target="_blank">
-                        <span class="link-icon">
-                        CV
-                    </a>
-                </div>
-                <div class="link-item">
-                    <a href="Rajvi_Resume_08_2025.pdf" target="_blank">
-                        <span class="link-icon">
-                        Resume
-                    </a>
-                </div>
+            <div class="document-links">
+                <a href="Rajvi_Resume_08_2025.pdf" target="_blank">Resume</a>
+                <a href="RajviAgravat_CV_08_2025.pdf" target="_blank">CV</a>
             </div>
         </div>
 
@@ -360,6 +366,7 @@
     </div>
 </body>
 </html>
+
 
 
 
