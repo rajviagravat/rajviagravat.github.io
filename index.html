@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rajvi Agravat</title>
     <style>
         body {
@@ -203,6 +204,7 @@
             font-size: 14px;
         }
         li::before {
+            content: '▸';
             color: #333;
             position: absolute;
             left: -18px;
@@ -210,7 +212,7 @@
             font-weight: bold;
         }
         .press-conference {
-            color: #333;
+            color: #d32f2f;
             font-weight: 500;
         }
         
@@ -240,19 +242,79 @@
             color: #333;
         }
         ul ul li::before {
+            content: '–';
             color: #333;
             font-size: 14px;
         }
+
+        /* Tablet styles */
+        @media (max-width: 1024px) {
+            .container {
+                grid-template-columns: 300px 1fr;
+            }
+            .sidebar {
+                padding: 30px 20px;
+            }
+            .main-content {
+                padding: 30px 35px;
+            }
+        }
+
+        /* Mobile styles */
         @media (max-width: 768px) {
             .container {
                 grid-template-columns: 1fr;
+                margin: 10px;
             }
             .sidebar {
                 border-radius: 20px 20px 0 0;
+                padding: 25px 20px;
             }
             .main-content {
                 border-radius: 0 0 20px 20px;
-                padding: 30px 25px;
+                padding: 25px 20px;
+            }
+            .photo {
+                width: 150px;
+                height: 150px;
+            }
+            .name {
+                font-size: 20px;
+            }
+            .section h2 {
+                font-size: 16px;
+            }
+            .social-links {
+                gap: 20px;
+            }
+            .social-icon {
+                width: 24px;
+                height: 24px;
+            }
+            .intro p, .section p {
+                font-size: 15px;
+                line-height: 1.6;
+            }
+            li {
+                font-size: 14px;
+                margin-bottom: 6px;
+            }
+        }
+
+        /* Small mobile styles */
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+            .main-content, .sidebar {
+                padding: 20px 15px;
+            }
+            .photo {
+                width: 120px;
+                height: 120px;
+            }
+            .name {
+                font-size: 18px;
             }
         }
     </style>
@@ -364,36 +426,3 @@
     </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
