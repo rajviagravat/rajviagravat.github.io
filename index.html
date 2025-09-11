@@ -1,146 +1,322 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Rajvi Agravat</title>
+    <title>Rajvi Agravat - Clean Modern Theme</title>
     <style>
         body {
-            font-family: 'Times New Roman', Times, serif;
+            font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
             line-height: 1.6;
             margin: 0;
-            background-color: #AEC6CF; /* Pastel Blue background */
+            background: linear-gradient(135deg, #e8f5e8 0%, #f0e6ff 50%, #ffe6f0 100%);
             color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            padding: 20px;
         }
         .container {
-            max-width: 1000px; /* Increased size */
-            margin: 40px auto;
-            background: #ffffff;
-            padding: 40px; /* Increased padding */
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            display: flex;
-            align-items: flex-start; /* Align items at the start */
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #fdfcff;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(200, 180, 220, 0.2);
+            display: grid;
+            grid-template-columns: 340px 1fr;
+            min-height: 100vh;
+            overflow: hidden;
+            border: 1px solid rgba(220, 200, 240, 0.3);
         }
-        .photo-and-social {
+        .sidebar {
+            background: linear-gradient(180deg, #d4b5e8 0%, #b8e6d4 50%, #f4d1d1 100%);
+            padding: 40px 30px;
+            border-radius: 20px 0 0 20px;
             text-align: center;
+            color: #4a4a4a;
         }
-        .photo-and-social img {
-            max-width: 300px; /* Increased size */
-            max-height: 300px; /* Increased size */
-            width: auto;
-            height: auto;
+        .main-content {
+            padding: 40px 50px;
+            background: #fdfcff;
+            border-radius: 0 20px 20px 0;
+        }
+        .photo {
+            width: 220px;
+            height: 220px;
             border-radius: 50%;
-            border: 4px solid #AEC6CF; /* Pastel Blue */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            align-self: flex-start; /* Align the image with the top of the text */
+            border: 4px solid rgba(255, 255, 255, 0.8);
+            margin: 0 auto 25px;
+            object-fit: cover;
+            box-shadow: 0 8px 25px rgba(180, 150, 200, 0.3);
         }
-        .name-title {
-            margin-top: 10px;
-            font-size: 20px;
-            font-weight: bold;
-            color: #333;
+        .name {
+            font-size: 28px;
+            font-weight: 300;
+            color: #5a4b73;
+            margin-bottom: 8px;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
         }
-        .subtitle {
+        .title {
             font-size: 16px;
-            font-weight: normal;
-            color: #555;
+            color: #6b5b73;
+            margin-bottom: 30px;
+            font-style: italic;
         }
-        .text-content {
-            margin-left: 20px;
-            color: #333;
-            flex: 1;
+        .contact-info {
+            margin-bottom: 30px;
+            font-size: 13px;
+            color: #5a4b73;
         }
-        p {
-            margin: 20px 0;
+        .contact-info div {
+            margin-bottom: 8px;
         }
-        .social-links {
-            margin-top: 20px;
+        .links-section {
+            margin-bottom: 25px;
+        }
+        .links-section h3 {
+            font-size: 14px;
+            color: #5a4b73;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 400;
+            border-bottom: 1px solid rgba(90, 75, 115, 0.3);
+            padding-bottom: 8px;
+        }
+        .link-item {
+            margin-bottom: 10px;
+        }
+        .link-item a {
             display: flex;
-            justify-content: center; /* Center the social links */
-            gap: 20px;
-        }
-        .social-links a {
+            align-items: center;
             text-decoration: none;
-            color: #333;
+            color: #5a4b73;
+            font-size: 13px;
+            padding: 12px 0;
+            transition: all 0.3s ease;
         }
-        .social-links a img {
-            width: 30px;
-            height: 30px;
-            transition: transform 0.3s ease-in-out;
+        .link-item a:hover {
+            color: #7a6b85;
+            transform: translateX(5px);
         }
-        .social-links a:hover img {
-            transform: scale(1.2);
+        .link-icon {
+            width: 16px;
+            height: 16px;
+            margin-right: 10px;
         }
-        .cv-link {
-            margin-top: 20px;
-            text-align: center;
+        .section {
+            margin-bottom: 40px;
         }
-        .cv-link a {
-            color: #004080; /* Accent Blue */
-            text-decoration: none;
+        .section h2 {
+            font-size: 26px;
+            color: #7a6b85;
+            margin-bottom: 20px;
+            font-weight: 300;
+            position: relative;
+            padding-bottom: 12px;
+        }
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, #d4b5e8, #b8e6d4, #f4d1d1);
+            border-radius: 2px;
+        }
+        .section h3 {
+            font-size: 19px;
+            color: #8a7ca8;
+            margin-bottom: 12px;
+            margin-top: 25px;
+            font-weight: 400;
+        }
+        .section p {
+            margin-bottom: 15px;
+            color: #555;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+        .intro p {
+            font-size: 16px;
+            color: #444;
+        }
+        .experience-item {
+            margin-bottom: 30px;
+            padding: 0;
+            border-left: 3px solid #b8e6d4;
+            padding-left: 20px;
+        }
+        .experience-title {
+            font-weight: 500;
+            color: #7a6b85;
+            font-size: 17px;
+            margin-bottom: 5px;
+        }
+        .experience-org {
+            font-style: italic;
+            color: #8a7ca8;
+            margin-bottom: 12px;
+            font-size: 15px;
+        }
+        .research-item {
+            margin-bottom: 25px;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(220, 200, 240, 0.3);
+        }
+        .presentation-item {
+            margin-bottom: 20px;
+        }
+        .presentation-item strong {
+            color: #8a7ca8;
+            font-weight: 500;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+            color: #555;
+            position: relative;
+        }
+        li::before {
+            content: '•';
+            color: #d4b5e8;
+            position: absolute;
+            left: -18px;
+            font-size: 16px;
             font-weight: bold;
         }
-        .cv-link a:hover {
-            text-decoration: underline;
-        }
-        .contact {
-            margin-top: 20px;
-            text-align: center;
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                border-radius: 20px 20px 0 0;
+            }
+            .main-content {
+                border-radius: 0 0 20px 20px;
+                padding: 30px 25px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="photo-and-social">
-            <img src="images/rajvi.png" alt="Rajvi Agravat">
-            <div class="name-title">Rajvi Agravat</div>
-            <div class="subtitle">Auditory Neuroscientist</div>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/rajvi-agravat-b841a6129/" target="_blank">
-                    <img src="images/linkedin.png" alt="LinkedIn">
-                </a>
-                <a href="https://x.com/rajviagravat" target="_blank">
-                    <img src="images/twitter.png" alt="Twitter">
-                </a>
+        <div class="sidebar">
+            <img src="images/rajvi.png" alt="Rajvi Agravat" class="photo">
+            <div class="name">Rajvi Agravat</div>
+            <div class="title">Auditory Neuroscientist</div>
+            
+            <div class="contact-info">
+                <div>📧 rajvi@utexas.edu</div>
+                <div>📧 rajviagravat@gmail.com</div>
+            </div>
+
+            <div class="links-section">
+                <h3>Professional Links</h3>
+                <div class="link-item">
+                    <a href="https://www.linkedin.com/in/rajvi-agravat-b841a6129/" target="_blank">
+                        <span class="link-icon">💼</span>
+                        LinkedIn Profile
+                    </a>
+                </div>
+                <div class="link-item">
+                    <a href="https://x.com/rajviagravat" target="_blank">
+                        <span class="link-icon">🐦</span>
+                        Twitter/X
+                    </a>
+                </div>
+                <div class="link-item">
+                    <a href="https://scholar.google.com/citations?user=your-google-scholar-id" target="_blank">
+                        <span class="link-icon">🎓</span>
+                        Google Scholar
+                    </a>
+                </div>
+            </div>
+
+            <div class="links-section">
+                <h3>Documents</h3>
+                <div class="link-item">
+                    <a href="RajviAgravat_CV_08_2025.pdf" target="_blank">
+                        <span class="link-icon">📄</span>
+                        Academic CV
+                    </a>
+                </div>
+                <div class="link-item">
+                    <a href="RajviAgravat_Resume_04_2025.pdf" target="_blank">
+                        <span class="link-icon">📋</span>
+                        Industry Resume
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="text-content">
-            <p>Hello! I am a Ph.D. student in Neuroscience at The University of Texas at Austin, specializing in speech, 
-                auditory, and attention neuroscience. I investigate the neural mechanisms of speech perception, particularly in 
-                naturalistic 'cocktail party' scenarios, using direct brain recordings (stereo EEG) and computational modeling. 
-                By investigating implicit (stimulus-driven) and explicit (goal-directed) attention, I aim to inform the design
-                of hearing technologies, AI-driven speech systems (STT/TTS), and therapeutic interventions for cognitive-linguistic
-                disorders. </p>
 
-            </p>With over 6 years of experience in neuroscience research, I have worked on diverse projects. 
-                My work integrates advanced techniques such as acoustic modeling, source separation deep neural networks, and encoding
-                models to predict brain activity in response to complex auditory stimuli. I also develop game-based paradigms to study 
-                cognitive-load and attention dynamics. Beyond the lab, I am passionate about open science, mentorship, and bridging gaps
-                between neuroscience, engineering, and clinical applications. </p>
+        <div class="main-content">
+            <div class="section intro">
+                <p>Hello! I am a Ph.D. student in Neuroscience at The University of Texas at Austin, specializing in speech, auditory, and attention neuroscience. I investigate the neural mechanisms of speech perception, particularly in naturalistic 'cocktail party' scenarios, using direct brain recordings (stereo EEG) and computational modeling.</p>
+                
+                <p>By investigating implicit (stimulus-driven) and explicit (goal-directed) attention, I aim to inform the design of hearing technologies, AI-driven speech systems (STT/TTS), and therapeutic interventions for cognitive-linguistic disorders.</p>
 
-            </p>I am also passionate about UX Research and harnessing research findings to design inclusive technology that improves the way 
-            people interact with the world around them. </p>
-            
-            <p>Promoting diversity and mentorship in STEM is deeply important to me. As a woman in STEM, I am interested in empowering the next 
-                generation of scientists through mentorship and professional development opportunities.</p>
-            
-            <p>I have presented my research at conferences like Advances and Perspectives in Auditory Neuroscience (APAN), Society for 
-                Neuroscience (SfN) and received research awards from organizations like the Texas SLH Foundation. </p>
+                <p>I am also passionate about UX Research and harnessing research findings to design inclusive technology that improves the way people interact with the world around them.</p>
 
-            <p>Outside of work, you will find me trying new restaurants and cuisines, reading at a coffee shop, volunteering at the 
-                Austin Animal Shelter, or planning my next travel. :) </p>
+                <p>Promoting diversity and mentorship in STEM is deeply important to me. As a woman in STEM, I am interested in empowering the next generation of scientists through mentorship and professional development opportunities.</p>
 
-            <p>Here are links to my <a href="RajviAgravat_CV_08_2025.pdf" target="_blank">Academic CV</a>, 
-                <a href="Rajvi_Resume_08_2025.pdf" target="_blank">Industry Resume</a> and 
-                <a href="https://scholar.google.com/citations?user=your-google-scholar-id" target="_blank">Google Scholar</a>.</p>
-            
-            <p>I am most likely to respond via email at [rajvi at utexas.edu] or [rajviagravat at gmail.com].</p>
+                <p>Outside of work, you will find me trying new restaurants and cuisines, reading at a coffee shop, volunteering at the Austin Animal Shelter, or planning my next travel. :)</p>
+            </div>
+
+            <div class="section">
+                <h2>Experience</h2>
+                
+                <div class="experience-item">
+                    <div class="experience-title">Ph.D. Student in Neuroscience</div>
+                    <div class="experience-org">The University of Texas at Austin</div>
+                    <p>Investigating neural mechanisms of speech perception in naturalistic 'cocktail party' scenarios using stereo EEG and computational modeling. Focus on implicit and explicit attention mechanisms to inform hearing technology design and therapeutic interventions.</p>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-title">Neuroscience Research (6+ years experience)</div>
+                    <div class="experience-org">Various Research Projects</div>
+                    <p>Extensive experience integrating advanced techniques including acoustic modeling, source separation deep neural networks, and encoding models to predict brain activity in response to complex auditory stimuli. Development of game-based paradigms to study cognitive-load and attention dynamics.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Research Interests</h2>
+                
+                <div class="research-list">
+                    <div>Speech & Auditory Neuroscience</div>
+                    <div>Attention & Cognitive Neuroscience</div>
+                    <div>Computational Neuroscience</div>
+                    <div>Applied Neuroscience & Technology</div>
+                    <div>User Experience Research</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Presentations & Recognition</h2>
+                
+                <div class="presentation-item">
+                    <p><strong>Conference Presentations:</strong></p>
+                    <ul>
+                        <li>Advances and Perspectives in Auditory Neuroscience (APAN)</li>
+                        <li>Society for Neuroscience (SfN)</li>
+                    </ul>
+                </div>
+
+                <div class="presentation-item">
+                    <p><strong>Awards & Recognition:</strong></p>
+                    <ul>
+                        <li>Research Award - Texas SLH Foundation</li>
+                    </ul>
+                </div>
+
+                <div class="presentation-item">
+                    <p><strong>Professional Involvement:</strong></p>
+                    <ul>
+                        <li>Active contributor to open science initiatives</li>
+                        <li>Mentorship and professional development programs</li>
+                        <li>Diversity and inclusion advocacy in STEM</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </body>
 </html>
-
-
